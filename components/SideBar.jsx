@@ -6,6 +6,7 @@ export default function SideBar({setShowNewComponent}){
     const {showTopicMenue, setShowTopicMenue} = useContext(MyContext)
     const {todoItems, setTodoItems}=useContext(MyContext)
     const{projectHeading,setProjectHeading}=useContext(MyContext);
+    const {clearAll} =useContext(MyContext);
     const handleAddProject=()=>{
           setShowNewComponent(true);
           setShowTopicMenue(true);
@@ -35,6 +36,7 @@ export default function SideBar({setShowNewComponent}){
                     return (<li key={index}><section id="topic-heading-section"><button className="button-sidebar" onClick={()=>handleRemoveItem(index)}>X</button><button onClick={()=>handleProjectClicks(index)} className="button-sidebar">{element.title}</button ></section></li>)
                 })}
             </ul>
+            <button onClick={clearAll}>Clear all</button>
         </div>
         
     )

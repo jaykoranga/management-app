@@ -9,6 +9,7 @@ import NoProjectSelected from "../components/NoProjectSelected";
 
 function App() {
   
+  
   const [clickedIndex,setClickedIndex]=useState(-1)
   
   const [todoItems, setTodoItems] = useState([])
@@ -38,14 +39,29 @@ function App() {
   useEffect(() => {
     window.localStorage.setItem('todo-key', JSON.stringify(todoItems));
   }, [todoItems]);
+   
+  if(projectHeading.lenth!=0){
+    
+  }
 
+  function clearAll(){
+    window.localStorage.clear();
+    setProjectHeading([]);
+    setTodoItems([]);
+    if(showNewComponent) setShowNewComponent(false);
+    
+    
+  }
   function handleProjectClicks(index){
     console.log(`checking function index ${index} is clicked`)
     setClickedIndex(index);
-    if(showTopicMenue) setShowTopicMenue(false);
+    if(showNewComponent===false){
+      setShowNewComponent(true);
+      if(showTopicMenue) setShowTopicMenue(false);
+    } 
  }
   return (
-    <MyContext.Provider value={{projects,setProjects,projectHeading,setProjectHeading,showTopicMenue, setShowTopicMenue,handleProjectClicks,clickedIndex,setClickedIndex,todoItems, setTodoItems}}>
+    <MyContext.Provider value={{projects,setProjects,projectHeading,setProjectHeading,showTopicMenue, setShowTopicMenue,handleProjectClicks,clickedIndex,setClickedIndex,todoItems, setTodoItems,clearAll}}>
     <main className="main">
       <SideBar setShowNewComponent={setShowNewComponent}/>
       
