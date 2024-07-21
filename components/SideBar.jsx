@@ -30,13 +30,15 @@ export default function SideBar({setShowNewComponent}){
         
         <div className="side-bar">
             <h2>Planner</h2>
-            <button className="button-sidebar" onClick={handleAddProject}>+ add project</button>
+            <button className="button" onClick={handleAddProject}>+ add project</button>
+            <div className="list-container">
             <ul>
                 {projectHeading.map((element, index) => {
-                    return (<li key={index}><section id="topic-heading-section"><button className="button-sidebar" onClick={()=>handleRemoveItem(index)}>X</button><button onClick={()=>handleProjectClicks(index)} className="button-sidebar">{element.title}</button ></section></li>)
+                    return (<li key={index}><section id="topic-heading-section"><button className="" onClick={()=>handleRemoveItem(index)}>X</button><button onClick={()=>handleProjectClicks(index)} className="button-sidebar">{element.title}</button ></section></li>)
                 })}
             </ul>
-            <button onClick={clearAll}>Clear all</button>
+            </div>
+            <button className="clear-btn" onClick={clearAll}>Clear all</button>
         </div>
         
     )

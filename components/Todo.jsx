@@ -42,11 +42,11 @@ export default function Todo() {
             
             
             <h2>Tasks</h2>
-            <button onClick={() => setShowInput(true)}>+ add tasks</button>
+            <button className="button" onClick={() => setShowInput(true)}>+ add tasks</button>
             <ul>
                 {todoItems[clickedIndex] && todoItems[clickedIndex].length > 0 ? (
                     todoItems[clickedIndex].map((element, index) => {
-                        return (<li key={index}>{element}<button onClick={() => handleRemoveItem(index)}>X</button></li>)
+                        return (<li key={index}>{element}<button onClick={() => handleRemoveItem(index)} className="cross-btn">X</button></li>)
                     })
                 ) : (
                     <p>No tasks for this project</p>
@@ -55,9 +55,9 @@ export default function Todo() {
             {showInput && <>< input value={inputValue} onChange={function handleChange(e) {
                 return (setInputValue(e.target.value))
             }} />
-                {showInput && <><button type="submit" onClick={handleAddingTasks}>confirm</button>
-                    <button onClick={() => setShowInput(false)}>cancel</button>
-                </>}
+                {showInput && <div><button className="confrm-btn" type="submit" onClick={handleAddingTasks}>confirm</button>
+                    <button  className="cancel-btn" onClick={() => setShowInput(false)}>cancel</button>
+                </div>}
             </>
             }
 
