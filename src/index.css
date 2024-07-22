@@ -13,6 +13,7 @@
     padding: 30px;
     margin-top: 5vh;
     border-radius: 10px;
+    
 
    
 }
@@ -46,6 +47,7 @@
    color: aliceblue;
    font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
   
@@ -72,6 +74,7 @@
   text-transform:  uppercase;
   text-shadow: 2px 2px 8px #f3ecec;
   text-align: center; 
+  cursor: pointer;
 
 }
 .confrm-btn{
@@ -87,6 +90,7 @@
   text-transform:  uppercase;
   text-align: center;
   text-shadow: 2px 2px 8px #f3ecec;
+  cursor: pointer;
 }
 .button:hover{
     background-color: #2f3030;/* Green */
@@ -111,6 +115,7 @@
   margin: 5px;
   text-align: center;
   text-shadow: 2px 2px 8px #f3ecec;
+  cursor: pointer;
 }
 .cancel-btn:hover{
     background-color: #747876; /* Green */
@@ -129,7 +134,8 @@
   text-transform:  uppercase;
   margin: 5px;
   text-align: center; margin: auto;
-  text-shadow: 2px 2px 8px #f3ecec
+  text-shadow: 2px 2px 8px #f3ecec;
+  cursor: pointer;
 }
 .clear-btn:hover{
     background-color: #d93c03; /* Green */
@@ -158,6 +164,7 @@ li{
     font-size:x-large;
     text-decoration: dotted;
     list-style-type:decimal;
+    cursor: pointer;
 }
 .cross-btn{
     width:5px;
@@ -171,7 +178,8 @@ li{
   text-transform:  uppercase;
   margin: 10px;
  
-  text-shadow: 2px 2px 8px #3a3939
+  text-shadow: 2px 2px 8px #3a3939;
+  cursor: pointer;
 }
 .cross-btn:hover{
     color: #f04405;
